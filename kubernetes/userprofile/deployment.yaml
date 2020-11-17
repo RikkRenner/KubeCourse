@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: userprofile
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: userprofile
+  template:
+    metadata:
+      labels:
+        app: userprofile
+    spec:
+      containers:
+      - image: registryxaj9926.azurecr.io/tripinsights/userprofile:latest
+        name: userprofile
+        ports:
+          - containerPort: 80
+        envFrom:
+          - configMapRef:
+              name: trip-config
+        resources: {}
+        terminationMessagePath: /termination-log
+        terminationMessagePolicy: File
+      dnsPolicy: ClusterFirst
+      restartPolicy: Always
+      schedulerName: default-scheduler
+      securityContext: {}
+      terminationGracePeriodSeconds: 30   
+         

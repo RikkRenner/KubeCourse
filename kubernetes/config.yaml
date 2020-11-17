@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: trip-config
+data:
+  SQL_USER: sqladminxAj9926
+  SQL_PASSWORD: kA6rf2Nq9
+  SQL_SERVER: sqlserverxaj9926.database.windows.net
+  TRIPS_API_ENDPOINT: "http://trips.default.svc.cluster.local"
+  USERPROFILE_API_ENDPOINT: "http://userprofile.default.svc.cluster.local"
+  ASPNETCORE_ENVIRONMENT: "Development"
+  
+  
+
+
+
+
+
+
