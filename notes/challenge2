@@ -1,0 +1,8 @@
+Challenge 2 notes
+docker tag tripinsights/tripviewer <registry image>
+
+az aks update -n <clusterName> -g <resourcegroup> --attach-acr <registry name>
+
+Azure SQL FDQN: <sqlInstance>
+Azure SQL Server User: <sql username>
+Azure SQL Server Pass: <sql password>
